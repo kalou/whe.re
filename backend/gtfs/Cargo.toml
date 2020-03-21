@@ -1,0 +1,11 @@
+[package]
+name = "gtfs"
+version = "0.1.0"
+authors = ["Pascal Bouchareine <pascal@gandi.net>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gtfs-structures = "0.19.1"
+quadtree = { path = "../quadtree" }

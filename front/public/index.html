@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>whe.re</title>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122925-4"></script>
+	<script>
+		hash = {
+			"whe.re": 4,
+			"sco.re": 6,
+		}
+		var u = new URL(window.location.origin).hostname;
+		track = "UA-122925-" + (hash[u.split(".").slice(-2).join(".")] || 1);
+
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', track);
+	</script>
+  </head>
+  <body>
+    <noscript>
+      <strong>JavaScript not enabled.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

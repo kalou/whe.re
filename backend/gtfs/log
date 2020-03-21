@@ -1,0 +1,181 @@
+warning: unused import: `std::borrow::Borrow`
+ --> quadtree/src/lib.rs:7:5
+  |
+7 | use std::borrow::Borrow;
+  |     ^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+   Compiling gtfs v0.1.0 (/Users/pb/git/whe.re/backend/gtfs)
+warning: unused import: `HashSet`
+ --> gtfs/src/lib.rs:4:33
+  |
+4 | use std::collections::{HashMap, HashSet};
+  |                                 ^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `std::error`
+ --> gtfs/src/lib.rs:6:5
+  |
+6 | use std::error;
+  |     ^^^^^^^^^^
+
+warning: unused import: `std::thread`
+ --> gtfs/src/lib.rs:8:5
+  |
+8 | use std::thread;
+  |     ^^^^^^^^^^^
+
+warning: unused import: `std::time`
+  --> gtfs/src/lib.rs:10:5
+   |
+10 | use std::time;
+   |     ^^^^^^^^^
+
+warning: unused import: `HashSet`
+ --> gtfs/src/lib.rs:4:33
+  |
+4 | use std::collections::{HashMap, HashSet};
+  |                                 ^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `std::error`
+ --> gtfs/src/lib.rs:6:5
+  |
+6 | use std::error;
+  |     ^^^^^^^^^^
+
+warning: unused import: `std::thread`
+ --> gtfs/src/lib.rs:8:5
+  |
+8 | use std::thread;
+  |     ^^^^^^^^^^^
+
+warning: unused import: `std::time`
+  --> gtfs/src/lib.rs:10:5
+   |
+10 | use std::time;
+   |     ^^^^^^^^^
+
+warning: unused variable: `x`
+   --> gtfs/src/lib.rs:149:33
+    |
+149 |                 .cloned().find(|x| true)
+    |                                 ^ help: consider prefixing with an underscore: `_x`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `x`
+   --> gtfs/src/lib.rs:149:33
+    |
+149 |                 .cloned().find(|x| true)
+    |                                 ^ help: consider prefixing with an underscore: `_x`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: value assigned to `now` is never read
+   --> gtfs/src/lib.rs:194:9
+    |
+194 |         now = Instant::now();
+    |         ^^^
+    |
+    = note: `#[warn(unused_assignments)]` on by default
+    = help: maybe it is overwritten before being read?
+
+warning: unused variable: `cnt`
+   --> gtfs/src/lib.rs:195:17
+    |
+195 |         let mut cnt = 0;
+    |                 ^^^ help: consider prefixing with an underscore: `_cnt`
+
+warning: field is never read: `db`
+  --> gtfs/src/lib.rs:52:5
+   |
+52 |     db: gtfs_structures::Gtfs, // The underlying GTFS db
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: field is never read: `trips`
+  --> gtfs/src/lib.rs:53:5
+   |
+53 |     trips: HashMap<String, Vec<String>>, // HashMap from stop to all route_ids from stop
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `routes`
+  --> gtfs/src/lib.rs:54:5
+   |
+54 |     routes: HashMap<String, Vec<String>> // HashMap from route to all trip_ids-- 
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: struct is never constructed: `TransitMap`
+  --> gtfs/src/lib.rs:72:8
+   |
+72 | struct TransitMap {
+   |        ^^^^^^^^^^
+
+warning: method is never used: `new`
+  --> gtfs/src/lib.rs:77:5
+   |
+77 |     fn new() -> Self {
+   |     ^^^^^^^^^^^^^^^^
+
+warning: method is never used: `load`
+  --> gtfs/src/lib.rs:83:5
+   |
+83 |     fn load(&mut self, file: &str) -> Result<usize, &str> {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: method is never used: `get_stops`
+   --> gtfs/src/lib.rs:124:5
+    |
+124 | /     fn get_stops(&self, lat: f64, lon: f64)
+125 | |         -> impl Iterator<Item=&IndexedStop> {
+126 | |         self.index.get(lon, lat)
+127 | |     }
+    | |_____^
+
+warning: method is never used: `stop`
+   --> gtfs/src/lib.rs:133:5
+    |
+133 |     fn stop(&self) -> &gtfs_structures::Stop {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: method is never used: `routes`
+   --> gtfs/src/lib.rs:138:5
+    |
+138 |     fn routes(&self) -> Vec<String> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: method is never used: `next_trip_ids`
+   --> gtfs/src/lib.rs:146:5
+    |
+146 |     fn next_trip_ids(&self) -> Vec<String> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: method is never used: `next_trips`
+   --> gtfs/src/lib.rs:154:5
+    |
+154 |     fn next_trips(&self) -> Vec<TripCursor> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> gtfs/src/lib.rs:187:13
+    |
+187 |         let mut tm = simple_load_file();
+    |             ----^^
+    |             |
+    |             help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` on by default
+
+warning: variable does not need to be mutable
+   --> gtfs/src/lib.rs:195:13
+    |
+195 |         let mut cnt = 0;
+    |             ----^^^
+    |             |
+    |             help: remove this `mut`
+

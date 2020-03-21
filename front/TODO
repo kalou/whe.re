@@ -1,0 +1,14 @@
+[ ] https://github.com/coryasilva/Leaflet.ExtraMarkers#icons
+[x] BUG remove map nodes when they're removed
+[x] refactor components to have ConstraintList
+   [x] main app <ConstraintList @addConstraint @highlightNode @... />
+   [x] ConstraintList: Constraint Remove
+   [ ] Constraint: [select type] <Param1> <Param2>
+[ ] Change path calculation and logic
+    [ ] Only display nodes & POIs from MultiIC
+        [ ] For OnTheWay: NODE - [set of pois] - NODE
+        [ ] For Near: NODE - [set of pois]
+        [ ] For NearPoi: [set of pois]
+    [ ] For each possible POI - select active one and draw path to It
+        [ ] Display details on path segments (bus route if any, walk, time)
+        [ ] Color different segments

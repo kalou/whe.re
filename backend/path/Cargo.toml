@@ -1,0 +1,20 @@
+[package]
+name = "path"
+version = "0.1.0"
+authors = ["Pascal Bouchareine <pascal@gandi.net>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = [ "derive" ] }
+rocket = "0.4.2"
+rocket_contrib = { version = "0.4.2", default-features = false, features = ["json"] }
+rocket_cors = "0.5.1"
+
+geojson = {path = "../geojson"}
+graph = {path = "../graph"}
+osm = {path = "../osm"}
+geohash = {path = "../geohash"}
+log = "0.4.8"
+env_logger = "0.7.1"

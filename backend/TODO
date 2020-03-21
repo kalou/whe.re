@@ -1,0 +1,44 @@
+[ ] MAIN TODO: cleanup, create some objects, refactor ugly stuff, write tests, ...
+[x] ,tt
+[x] osmpbfreader
+[x] improve node_index trie to have multiple nodes per key
+[ ] Score: improve score
+    [ ] Precompute at boot time:
+        [ ] For each POI, walk 15mn around
+        [ ] Every square gets a score for the POI
+    [ ] Then simply display filtered poi-scores around a point
+        [or bus/walking distance from X]: get /scores/poi=A&B&from=lat&lon
+            -> Vec<Square> with {Poi: score, Poi: score} map
+
+[ ] fix handling of tagged ways (way k=shop building outline not in graph)
+[ ] account for elevation in cost for walking/biking
+[ ] bus/driving/cycle routes
+[ ] create types to make lighter signatures, and be able to import graph and not have to import std::rc::Rc for ex.
+[ ] precompute A* routes from major map points and insert shortest path as single ways. also should flag them to allow exploration "on the way"?
+[ ] neighborhood scores: Walker that propagates "points" - 5 near, 4, 3, ... 1 far, 0 after a given distance. plug it on sco.re
+[x] connect all named nodes from the index instead of just pois (so you can use City, etc)
+    [x] Actually only index names if that's a POI ?
+[ ] add lon/lat to all queries and sort results by distance
+    [x] for search
+    [ ] create router towards the correct node dep on lon/lat geohash
+[ ] get rid of walkers & states incompat and simplify the graph walking
+    [ ] Graph trait implementation should simply add:
+        neighbors providing:
+            - way with cost
+            - next node
+        heuristic for "step" Option<value> None = ignore
+        include-in-results (P- remember_node())
+    [ ] refactor graph to include predicate save
+    [ ] make graphresult output nodes and HashSet of these nodes && || ables
+
+[ ] GTFS loading of typical transit node connections
+        [x] Quadmap bus_stops
+        [x] Has_stop(lon, lat) -> Iterator<I=Stop>
+            [ ] distance?
+        [ ] Stop.next_trips(Option<When>) -> Trip, Trip, Trip
+        [ ] Trip.next_stop() -> Stop + When
+        [ ] neighbors:
+            [ ] State = Walking? 5mn + "State = On the BUS:<bus_id>"
+            [ ] State = On the BUS:<trip_id> ? Next trip stop [both directions] + delay
+        heuristic:
+- If I take this trip h = min(stopdist+dist(stop, target) for stop on trip)

@@ -1,0 +1,13 @@
+[workspace]
+# rust-osm-reader fork
+# https://gitlab.com/Kalou/rust-osm-reader
+members = [
+	"geojson",
+	"osm",
+	"graph",
+    "path",
+	"quadtree",
+    "rust-osm-reader",
+    "geohash",
+    "gtfs"
+]
