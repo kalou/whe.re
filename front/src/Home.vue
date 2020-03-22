@@ -19,7 +19,7 @@
 
         <h2>Also check out <a href="https://sco.re">sco.re</a></h2>
 
-        <p class="explanation">All data comes from <a href="https://www.openstreetmap.org">OpenStreetMap</a>. Features and routes are calculated from a small PBF extract covering only the SF Bay area for now. Routes are computed by walking, not taking into account forbidden or dangerous ways - it will send you out for a walk on the freeway. Do not trust itineraries. If you want access to the API, or need specific developments, feel free to use contact at whe dot re.</p>
+        <p class="explanation">All data comes from <a href="https://www.openstreetmap.org">OpenStreetMap</a>. Features and routes are calculated from a small PBF extract covering only the SF Bay area for now. Routes are computed by walking, not taking into account forbidden or dangerous ways - it will send you out for a walk on the freeway. Do not trust itineraries. If you want access to the API, or need specific developments, feel free to use contact at whe dot re. Source code is <a href="https://github.com/kalou/whe.re">here.</a></p>
 	</div>
 </template>
 
